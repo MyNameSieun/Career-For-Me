@@ -1,6 +1,7 @@
 import Header from "./components/layouts/Header";
 import Navbar from "./components/layouts/Navber";
 import "./globals.css";
+import Providers from "./providers";
 
 export default function RootLayout({
   children,
@@ -10,9 +11,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className="mx-auto max-w-screen-lg p-6">
-        <Header />
-        <Navbar />
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
