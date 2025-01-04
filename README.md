@@ -14,9 +14,10 @@
 1.  [팀원 소개](#1)
 2.  [시작 가이드](#2)
 3.  [브랜치 및 디렉토리 구조](#3)
-4.  [커밋 컨벤션](#4)
-5.  [Package_yarn](#5)
-6.  [ 👴🗨️ 마무리](#6)
+4.  [Color 적용 방법](#4)
+5.  [커밋 컨벤션](#5)
+6.  [Package_yarn](#6)
+7.  [ 마무리👴🗨️](#7)
 
 <br >
 
@@ -40,7 +41,7 @@
 
 ## <span id="2">2. 🛠️ 시작 가이드</span>
 
-### Installation
+### 2.1 Installation
 
 ```shell
 # 1. 클론하기
@@ -55,7 +56,7 @@ $ yarn dev
 
 <br>
 
-### 리액트 버전 설치 확인
+### 2.2 리액트 버전 설치 확인
 
 본 프로젝트는 React 18 버전을 사용합니다.
 
@@ -76,7 +77,7 @@ yarn list --pattern react
 
 <br>
 
-### 브랜치 생성 가이드
+### 2.3 브랜치 생성 가이드
 
 ① 브랜치 생성
 
@@ -165,7 +166,53 @@ git branch -D <브랜치 이름>
 
 <br>
 
-## <span id="4">🤝 4. 커밋 컨벤션</span>
+# 4. <span id="4">🎨 4. Color 적용 방법</span>
+
+`tailwind.config.js` 파일에 프로젝트에서 사용할 색상을 정의해 뒀습니다.
+
+```ts
+extend: {
+  colors: {
+    careerForMe: {
+      main: "#6D72FF",
+      mainMedium: "#979AED",
+      red: "#FF4238",
+      redMedium: "#FF8E88",
+      gray01: "#F4F4F4",
+    },
+    gray: {
+      dark: "#737373",
+      medium: "#B2B2B2",
+      light: "#D2D2D2",
+    },
+  },
+}
+```
+
+<br>
+
+Tailwind에서 추가한 색상을 아래와 같이 사용할 수 있습니다.
+
+```tsx
+<p class="text-careerForMe-main">커리어 포미 색</p>
+```
+
+```tsx
+<div class="bg-careerForMe-red">배경 색</div>
+```
+
+```tsx
+<button class="border border-gray-medium">테두리 색</button>
+```
+
+<br>
+
+<!-- Top Button -->
+<p style='background: black; width: 32px; height: 32px; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-left: auto;'><a href="#top" style='color: white; '>▲</a></p>
+
+<br>
+
+## <span id="5">🤝 5. 커밋 컨벤션</span>
 
 커밋 메시지 형식: `[타입] - 하려는 내용`
 
@@ -188,7 +235,7 @@ git branch -D <브랜치 이름>
 
 <br>
 
-## <span id="5">⚙️ 5. Package_yarn</span>
+## <span id="6">⚙️ 6. Package_yarn</span>
 
 다음은 이 프로젝트에서 사용 중인 주요 라이브러리 목록입니다.
 
@@ -221,7 +268,7 @@ yarn add @tanstack/react-query-devtools
 
 <br>
 
-## <span id="6">6. 👴🗨️ 마무리</span>
+## <span id="7">7. 마무리👴🗨️</span>
 
 아직 폰트라던가 이미지 파일 넣는 app폴더는 작업 안했는데, 다른 분들 빨리 시작하는게 좋을 듯 하여 일단 올렸습니다.
 

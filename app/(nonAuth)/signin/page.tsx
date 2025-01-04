@@ -51,7 +51,7 @@ const SignInPage = () => {
                 height={150}
               />
             </Link>
-            <p className="text-center mt-2">
+            <p className="text-center mt-2 text-careerForMe-main">
               맞춤형 커리어 추천 플랫폼, 커리어 포미
             </p>
           </div>
@@ -60,7 +60,7 @@ const SignInPage = () => {
             <div className="mb-4">
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-sm font-medium text-gray-dark"
               >
                 이메일
               </label>
@@ -72,13 +72,13 @@ const SignInPage = () => {
                 autoComplete="username"
                 required
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-careerForMe-main"
               />
             </div>
             <div className="mb-6">
               <label
                 htmlFor="password"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-sm font-medium text-gray-dark"
               >
                 비밀번호
               </label>
@@ -90,12 +90,12 @@ const SignInPage = () => {
                 autoComplete="current-password"
                 required
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-careerForMe-main"
               />
             </div>
             {error && <div className="text-red-500">{error}</div>}
             <button
-              className="w-full p-3 bg-blue-500  text-white font-bold rounded-md"
+              className="w-full p-3 bg-careerForMe-main  text-white font-bold rounded-md"
               type="submit"
             >
               로그인

@@ -55,13 +55,18 @@ const SignupPage = () => {
         <Link href="/">
           <Image src="/images/logo.png" alt="Logo" width={150} height={150} />
         </Link>
-        <p className="text-center mt-2">
+        <p className="text-center mt-2 text-careerForMe-main">
           맞춤형 커리어 추천 플랫폼, 커리어 포미
         </p>
       </div>
 
       <form onSubmit={handleSubmit}>
-        <label htmlFor="email">아이디 (이메일)</label>
+        <label
+          htmlFor="email"
+          className="block text-sm font-medium text-gray-dark"
+        >
+          아이디 (이메일)
+        </label>
         <input
           id="email"
           type="email"
@@ -69,10 +74,15 @@ const SignupPage = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-3 mt-2 border border-gray-light rounded-md focus:outline-none focus:ring-2 focus:ring-careerForMe-main"
         />
 
-        <label htmlFor="password1">비밀번호</label>
+        <label
+          htmlFor="password1"
+          className="block text-sm font-medium text-gray-dark"
+        >
+          비밀번호
+        </label>
         <input
           id="password1"
           type="password"
@@ -80,10 +90,15 @@ const SignupPage = () => {
           value={password1}
           onChange={(e) => setPassword1(e.target.value)}
           required
-          className="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-3 mt-2 border border-gray-light rounded-md focus:outline-none focus:ring-2 focus:ring-careerForMe-main"
         />
 
-        <label htmlFor="password2">비밀번호 확인</label>
+        <label
+          htmlFor="password2"
+          className="block text-sm font-medium text-gray-dark"
+        >
+          비밀번호 확인
+        </label>
         <input
           id="password2"
           type="password"
@@ -91,10 +106,15 @@ const SignupPage = () => {
           value={password2}
           onChange={(e) => setPassword2(e.target.value)}
           required
-          className="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-3 mt-2 border border-gray-light rounded-md focus:outline-none focus:ring-2 focus:ring-careerForMe-main"
         />
 
-        <label htmlFor="name">이름 (실명)</label>
+        <label
+          htmlFor="name"
+          className="block text-sm font-medium text-gray-dark"
+        >
+          이름 (실명)
+        </label>
         <input
           id="name"
           type="text"
@@ -102,10 +122,15 @@ const SignupPage = () => {
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
-          className="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-3 mt-2 border border-gray-light rounded-md focus:outline-none focus:ring-2 focus:ring-careerForMe-main"
         />
 
-        <label htmlFor="nickname">닉네임</label>
+        <label
+          htmlFor="nickname"
+          className="block text-sm font-medium text-gray-dark"
+        >
+          닉네임
+        </label>
         <input
           id="nickname"
           type="text"
@@ -113,13 +138,13 @@ const SignupPage = () => {
           value={nickname}
           onChange={(e) => setNickname(e.target.value)}
           required
-          className="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-3 mt-2 border border-gray-light rounded-md focus:outline-none focus:ring-2 focus:ring-careerForMe-main"
         />
 
         {error && <p style={{ color: "red" }}>{error}</p>}
 
         <button
-          className="w-full p-3 bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-md"
+          className="w-full p-3 bg-careerForMe-main text-white font-bold rounded-md"
           type="submit"
         >
           회원가입
@@ -127,7 +152,7 @@ const SignupPage = () => {
       </form>
 
       <div className="mt-4 text-center">
-        <Link href="/signin" className="text-blue-500  text-sm">
+        <Link href="/signin" className="text-careerForMe-main  text-sm">
           이미 계정이 있으신가요? 로그인하기
         </Link>
       </div>
